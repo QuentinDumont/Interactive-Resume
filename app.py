@@ -236,7 +236,32 @@ layout_hover = {
         b=0,
         t=0,
         pad=0
-    )}
+    ),
+     'annotations'  : [
+        dict(
+            x=2,
+            y=10,
+            xref='x',
+            yref='y',
+            text='Hover your mouse over the <br>bubble to see the text change ',
+            showarrow = False,
+            align='left',
+        )],
+      'xaxis' : dict(
+        showgrid=False,
+        zeroline=False,
+        showline=False,
+        ticks='',
+        showticklabels=False),
+      "yaxis" : dict(
+        autorange=True,
+        showgrid=False,
+        zeroline=False,
+        showline=False,
+        ticks='',
+        showticklabels=False
+    )
+    }
 
 figure_hover = {'data' : [data_hover_w], 'layout' : layout_hover}
 
