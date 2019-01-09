@@ -17,16 +17,16 @@ def get_logo():
         ], className="ten columns padded", style = dict(width = '123px', height = '123px')),
 
         html.Div([
-            html.P('JUNIOR DATA ANALYST')], style = {'font-size': '40px',
+            html.P('BUSINESS/DATA ANALYST')], style = {'font-size': '40px',
             'color': 'rgb(198, 0, 0)',
             'margin-bottom': '0px',
             'font-weight': 'bold',
             'padding-top': '0px'}),
 
         html.Div([
-            html.P('HARVEY NASH')], style = {'font-size': '40px',
+            html.P('INTERACTIVE RESUME')], style = {'font-size': '40px',
             'color': 'black',
-            'margin-left': '300px',
+            'margin-left': '270px',
             'font-weight': 'bold',
             'padding-top': '0px'}),
 
@@ -43,7 +43,7 @@ def get_header():
 
         html.Div([
             html.H5(
-                'Quentin DUMONT - Interactive Resume')
+                'Quentin DUMONT')
         ], className="twelve columns padded")
 
     ], className="row gs-header gs-text-header")
