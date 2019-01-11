@@ -13,23 +13,9 @@ import pandas as pd
 app = dash.Dash(__name__)
 server = app.server
 
-# read data for tables (one df per table)
-df_fund_facts = pd.read_csv('data/df_contact_details.csv', encoding= 'latin1')
-df_price_perf = pd.read_csv('data/df_price_perf.csv')
+# read data for tables (one df per table) 
+df_contact_details = pd.read_csv('data/df_contact_details.csv', encoding= 'latin1')
 df_resume = pd.read_csv('data/df_resume.csv', encoding= 'latin1', sep = ';', header = None)
-df_current_prices = pd.read_csv('data/df_current_prices.csv')
-df_hist_prices = pd.read_csv('data/df_hist_prices.csv')
-df_avg_returns = pd.read_csv('data/df_avg_returns.csv')
-df_after_tax = pd.read_csv('data/df_after_tax.csv')
-df_recent_returns = pd.read_csv('data/df_recent_returns.csv')
-df_equity_char = pd.read_csv('data/df_equity_char.csv')
-df_equity_diver = pd.read_csv('data/df_equity_diver.csv')
-df_expenses = pd.read_csv('data/df_expenses.csv')
-df_minimums = pd.read_csv('data/df_minimums.csv')
-df_dividend = pd.read_csv('data/df_dividend.csv')
-df_realized = pd.read_csv('data/df_realized.csv')
-df_unrealized = pd.read_csv('data/df_unrealized.csv')
-df_graph = pd.read_csv("data/df_graph.csv")
 df_loc_resume = pd.read_csv('data/df_loc_resume.csv')
 df_loc_resume_stu = df_loc_resume[df_loc_resume['Type'] == 'Studies']
 df_loc_resume_pro = df_loc_resume[df_loc_resume['Type'] == 'Work']
@@ -1151,17 +1137,17 @@ def display_page(pathname):
     if pathname == '/quentin-dumont' or pathname == '/quentin-dumont/overview':
         return overview
     elif pathname == '/quentin-dumont/professional-experience':
-        return pricePerformance
+        return ProExp
     elif pathname == '/quentin-dumont/education':
-        return portfolioManagement
+        return noPage #To Come
     elif pathname == '/quentin-dumont/skills':
-        return feesMins
+        return skill_page
     elif pathname == '/quentin-dumont/references':
-        return distributions
+        return noPage # To Come
     elif pathname == '/quentin-dumont/what-is-next':
-        return newsReviews
+        return Future
     elif pathname == '/quentin-dumont/full-view' :
-        return overview, pricePerformance, feesMins, newsReviews
+        return overview, ProExp, skill_page, Future
     else:
         return noPage
 
